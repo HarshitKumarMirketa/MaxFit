@@ -1,0 +1,31 @@
+<apex:page controller="AttendeeController">
+  <apex:form >
+    <apex:pageBlock title="Attendee registration Form" >
+      <apex:pageMessages />
+        <apex:pageBlockSection title="Attendee" collapsible="true">
+            <apex:inputField value="{!attendee.Name}"/>
+            <apex:inputField value="{!attendee.Email__c}" />
+            <apex:inputField value="{!attendee.Phone__c}" />
+            <apex:inputField value="{!attendee.Company_Name__c}" />
+            <apex:inputField value="{!eventAttendee.Events__c}" rendered="{!eventAttendee.Events__c==null}" />
+            <apex:outputField value="{!eventAttendee.Events__c}" rendered="{!eventAttendee.Events__c!=null}" />
+            <apex:inputField value="{!eventAttendee.Name}" />
+        </apex:pageBlockSection>
+
+        <apex:pageBlockSection title="Location" collapsible="true">
+            <apex:inputField value="{!location.Name}"/>
+            <apex:inputField value="{!location.Street__c}" />
+            <apex:inputField value="{!location.City__c}" />
+            <apex:inputField value="{!location.State__c}" />
+            <apex:inputField value="{!location.Postal_Code__c}" />
+            <apex:inputField value="{!location.Country__c}" />
+            <apex:inputField value="{!location.Landmark__c}" />
+            <apex:inputField value="{!location.Verified__c}" />
+      </apex:pageBlockSection>
+
+    </apex:pageBlock>
+    <div style="text-align:center;">
+        <apex:commandButton value="Save" action="{!Save}"></apex:commandButton>
+    </div>
+  </apex:form>
+</apex:page>

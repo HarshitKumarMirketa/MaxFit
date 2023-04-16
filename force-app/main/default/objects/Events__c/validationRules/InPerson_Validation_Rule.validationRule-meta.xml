@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>InPerson_Validation_Rule</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISPICKVAL(Event_Type__c , &apos;In-Person&apos;) &amp;&amp; ISBLANK(Location__c)</errorConditionFormula>
+    <errorDisplayField>Location__c</errorDisplayField>
+    <errorMessage>Location must be selected in In-Person Event</errorMessage>
+</ValidationRule>

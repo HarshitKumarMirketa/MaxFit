@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Recurring_Validation2</fullName>
+    <active>true</active>
+    <errorConditionFormula>!Recurring__c &amp;&amp;  !ISPICKVAL( Frequency__c , &quot;&quot;)</errorConditionFormula>
+    <errorDisplayField>Frequency__c</errorDisplayField>
+    <errorMessage>You cannot select Frequency if Recurring is Unchecked</errorMessage>
+</ValidationRule>

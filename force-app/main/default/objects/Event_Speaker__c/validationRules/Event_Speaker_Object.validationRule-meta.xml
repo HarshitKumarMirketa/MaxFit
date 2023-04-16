@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Event_Speaker_Object</fullName>
+    <active>true</active>
+    <errorConditionFormula>Events__r.End__c &lt;  NOW() ||  !Events__r.Live__c</errorConditionFormula>
+    <errorDisplayField>Events__c</errorDisplayField>
+    <errorMessage>Speaker can only be associated with the Event whose End Date is in future &amp; Event Live Checkbox is checked</errorMessage>
+</ValidationRule>
